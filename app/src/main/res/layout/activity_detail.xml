@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#070707"
+    android:backgroundTint="#101010"
+    android:focusable="auto"
+    android:keepScreenOn="false"
+    android:orientation="vertical"
+    android:scrollbarSize="3dp"
+    tools:context=".DetailActivity">
+
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/player"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:transitionName="profile" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:transitionName="title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        tools:text="Money Plane" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="#070707"
+        android:backgroundTint="#101010"
+        android:indeterminateTint="#FFFFFF"
+        android:isIndicator="true"
+        android:maxWidth="300dp"
+        android:maxHeight="50dp"
+        android:mirrorForRtl="false"
+        android:nestedScrollingEnabled="false"
+        android:numStars="10"
+        android:progressBackgroundTint="#FFFFFF"
+        android:rating="8.5"
+        android:secondaryProgressTint="#E7EBED" />
+
+    <TextView
+        android:id="@+id/tvOverview"
+        android:transitionName="overview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        tools:text="A professional thief with $40 million in debt and his family's life on the line must commit one final heist - rob a futuristic airborne casino filled with the world's most dangerous criminals." />
+</LinearLayout>
