@@ -2,6 +2,7 @@ package com.codepath.wjzhang.flixster;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.RatingBar;
@@ -23,7 +24,8 @@ import okhttp3.Headers;
 
 public class DetailActivity extends YouTubeBaseActivity {
 
-    public static final String YOUTUBE_API_KEY = "AIzaSyB25Xwzict_4m19V6qX88GQxT2f7bXSVfI";
+    //public final String YOUTUBE_API_KEY = Context.getString(R.string.youtube_api_key);
+    public final String YOUTUBE_API_KEY = BuildConfig.YOUTUBE_API_KEY;
     public static final String VIDEOS_URL = "https://api.themoviedb.org/3/movie/%d/videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed";
     TextView tvTitle;
     TextView tvOverview;
@@ -34,6 +36,8 @@ public class DetailActivity extends YouTubeBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+
+
 
         tvTitle = findViewById(R.id.tvTitle);
         tvOverview = findViewById(R.id.tvOverview);
@@ -79,6 +83,7 @@ public class DetailActivity extends YouTubeBaseActivity {
             @Override
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
                 Log.d("DetailActivity","onInitializationSuccess");
+                Log.d("DetailActivity",YOUTUBE_API_KEY);
 
                 if (movie.getRating() >= 6) {// if rating is greater than 6 out 10, play trailer automatically
                     youTubePlayer.loadVideo(youtubeKey);
@@ -92,6 +97,7 @@ public class DetailActivity extends YouTubeBaseActivity {
             @Override
             public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
                 Log.d("DetailActivity","onInitializationFailure");
+                Log.d("DetailActivity_Failure",YOUTUBE_API_KEY);
             }
         });
     }

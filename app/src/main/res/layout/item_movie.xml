@@ -6,6 +6,18 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <ProgressBar
+        android:id="@+id/loadingBar"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/ivPoster"
+        android:layout_alignTop="@id/ivPoster"
+        android:layout_alignEnd="@id/ivPoster"
+        android:layout_alignBottom="@id/ivPoster"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="false"
+        android:layout_marginEnd="0dp" />
+
     <ImageView
         android:id="@+id/ivPoster"
         android:layout_width="120dp"
@@ -30,19 +42,6 @@
         android:scaleY="0.7"
         app:srcCompat="@android:drawable/ic_media_play"
         app:tint="#FFFFFF" />
-
-    <ProgressBar
-        android:id="@+id/loadingBar"
-        android:layout_width="128dp"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@id/ivPoster"
-        android:layout_alignTop="@id/ivPoster"
-        android:layout_alignEnd="@id/ivPoster"
-        android:layout_alignBottom="@id/ivPoster"
-        android:layout_alignParentStart="false"
-        android:layout_alignParentTop="false"
-        android:layout_marginEnd="0dp" />
-
 
 
     <TextView
